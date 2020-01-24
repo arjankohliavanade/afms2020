@@ -1,39 +1,197 @@
 <!DOCTYPE html>
 <html>
-<title>Apex Friendship 2020 East US</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 <style>
-body {font-family: "Raleway", Arial, sans-serif}
-.w3-row img {margin-bottom: -8px}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 </style>
 <body>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+<h2 style="text-align:center">Azure Cloud</h2>
 
-  <!-- Header -->
-  <header class="w3-container w3-xlarge w3-padding-24">
-    <a href="#" class="w3-left w3-button w3-white">Azure Map</a>
-  </header>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="http://afms2020cdn.blob.core.windows.net/afms2020cdn/azure-map-us-east.png" style="width:100%">
+  </div>
 
-  <!-- Photo Grid -->
-  <div class="w3-row center w3-padding-32">
-    <div class="w3-full">
-      <img src="http://afms2020cdn.blob.core.windows.net/afms2020cdn/azure-map-us-east.png" style="width:100%">
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://www.extremetech.com/wp-content/uploads/2013/07/microsoft-data-center-dublin-ireland.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://i2.cc-inc.com/pcm/marketing/Microsoft/2017/Pages/News/588x337_EMAIL-THUMBNAILS_MSFT-NEWS-CENTER-1_PCM_02162017_KM.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://static6.businessinsider.com/image/562a2c2fbd86ef16008c4312-1119-806/tumblr_mbntdhpwbj1rg4vl0o1_1280.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://www.eenews.net/image_assets/2017/07/image_asset_19708.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://static.seattletimes.com/wp-content/uploads/2015/09/Microsoft_9168-campus-1024x1024.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="http://afms2020cdn.blob.core.windows.net/afms2020cdn/azure-map-us-east.png" style="width:100%" onclick="currentSlide(1)" alt="Azure US East">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.extremetech.com/wp-content/uploads/2013/07/microsoft-data-center-dublin-ireland.jpg" style="width:100%" onclick="currentSlide(2)" alt="Outside an Azure Data Center">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i2.cc-inc.com/pcm/marketing/Microsoft/2017/Pages/News/588x337_EMAIL-THUMBNAILS_MSFT-NEWS-CENTER-1_PCM_02162017_KM.jpg" style="width:100%" onclick="currentSlide(3)" alt="Inside an Azure Data Center">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://static6.businessinsider.com/image/562a2c2fbd86ef16008c4312-1119-806/tumblr_mbntdhpwbj1rg4vl0o1_1280.jpg" style="width:100%" onclick="currentSlide(4)" alt="Inside an Azure Data Center 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.eenews.net/image_assets/2017/07/image_asset_19708.jpg" style="width:100%" onclick="currentSlide(5)" alt="Microsoft Campus">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://static.seattletimes.com/wp-content/uploads/2015/09/Microsoft_9168-campus-1024x1024.jpg" style="width:100%" onclick="currentSlide(6)" alt="Microsoft Campus 2">
     </div>
   </div>
-  
-<!-- End Page Content -->
 </div>
 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
 </body>
 </html>
